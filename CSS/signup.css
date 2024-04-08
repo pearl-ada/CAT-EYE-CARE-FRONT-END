@@ -1,8 +1,8 @@
 body{
-    background: url(oneeye.jpg) no-repeat center center/cover;
+    background: url(../assets/mediumphoto.jpg) no-repeat center center/cover;
     }
     .headers{
-    padding-left: 30%;
+    padding-left: 40%;
     color: brown;
     font-size: 35px;
     }
@@ -14,14 +14,23 @@ body{
     .form{
         display: flex;
         flex-direction: column;
-        height: 600px;
-        width: 700px;
+        height: 315px;
+        width: 400px;
+       /* border: 1px solid black;*/
         align-items: center;
         margin: auto;
         margin-top: 50px;
         background-color: rgba(0, 0, 0, 0.5);
         box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
         border-radius: 20px;
+    }
+    .form h1{
+        color: white;
+        font-size: 2rem;
+        margin: 30px;
+    }
+    a{
+        color: red;
     }
     /* boxes*/
     .box{
