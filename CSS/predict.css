@@ -9,7 +9,7 @@ body{
     .form{
         display: flex;
         flex-direction: column;
-        height: 520px;
+        height: 300px;
         width: 700px;
         align-items: center;
         margin: auto;
@@ -35,9 +35,9 @@ body{
             background-color: rgba(225, 225, 225, 0.1);
             color: white;
         }
-    #submit{
-            padding: 15px 80px 20px 10px;
-            margin-top: 5px;
+        #back{
+            padding: 10px 60px 10px 10px;
+            margin-top: 2px;
             width: 20%;
             background-color: brown;
             box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
@@ -47,12 +47,15 @@ body{
             border-radius: 20px;
             font-size: 1rem;
         }   
-    #submit:hover{
+        #back:hover{
             cursor: pointer;
             background-color: rgba(225, 225, 225, 0.1);
             color: white;
         }
-        .logout{
-            padding-left: 80%;
+        .button{
+            padding-left: 70rem;
+            padding-right: 0;
+            width: 200px;
             align-items: center;
+            padding-top: 80px;
         }

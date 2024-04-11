@@ -1,0 +1,104 @@
+body{
+    background: url(../assets/coverphoto.jpg) no-repeat center center/cover;
+    }
+    .headers{
+    padding-left: 40%;
+    color: brown;
+    font-size: 20px;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        width: 700px;
+        align-items: center;
+        margin: auto;
+        margin-top: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+    }
+    .box{
+        padding: 8px;
+        margin: 20px;
+        width: 50%;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 1rem;
+    }
+    .box:hover{
+            cursor: pointer;
+            background-color: rgba(225, 225, 225, 0.1);
+            color: white;
+        }
+        #back{
+            padding: 10px 60px 10px 10px;
+            margin-top: 2px;
+            width: 20%;
+            background-color: brown;
+            box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            font-size: 1rem;
+        }   
+        #back:hover{
+            cursor: pointer;
+            background-color: rgba(225, 225, 225, 0.1);
+            color: white;
+        }
+        .button{
+            padding-left: 70rem;
+            padding-right: 0;
+            width: 200px;
+            align-items: center;
+            padding-top: 80px;
+        }
+        .home{
+            padding-left: -10px;
+        }
+        /*I HAVE AN ISSUE TAKING THE HOME BUTTON TO THE LEFT*/
+        .submit{
+            padding-left: 45%;
+            width: 70px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        #submit{
+            padding: 15px 80px 20px 10px;
+            margin-top: 5px;
+            width: 20%;
+            background-color: brown;
+            box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            font-size: 1rem;
+            text-align: center;
+        }   
+    #submit:hover{
+            cursor: pointer;
+            background-color: rgba(225, 225, 225, 0.1);
+            color: white;
+        }
+        #home{
+            width: 90px;
+            background-color: brown;
+            box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            font-size: 1rem;
+        }
+        #home:hover{
+            cursor: pointer;
+            background-color: rgba(225, 225, 225, 0.1);
+            color: white;
+        }
