@@ -21,7 +21,7 @@ body{
     .box{
         padding: 8px;
         margin: 20px;
-        width: 50%;
+        width: 500px;
         border: none;
         outline: none;
         border-radius: 20px;
@@ -46,6 +46,8 @@ body{
             outline: none;
             border-radius: 20px;
             font-size: 1rem;
+            padding: 10px 10px 10px 10px;
+            width: 90px;
         }   
     #submit:hover{
             cursor: pointer;
