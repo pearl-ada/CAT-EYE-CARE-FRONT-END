@@ -26,25 +26,49 @@
 *::-webkit-scrollbar-thumb{
     background-color: var(--blue);
 }
+#submit,
+.delete-submit{
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 30px;
+    color: var(--white);
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.message{
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: brown;
+    color: var(--red);
+    font-size: 20px;
+}
+
 body{
     background: url(../assets/mediumphoto.jpg) no-repeat center center/cover;
     }
     .headers{
-    padding-left: 40%;
+    text-align: center;
     color: brown;
     font-size: 35px;
     }
+    .headers h1{
+        padding-right: 30px;
+    }
     .header h3{
-        right: 40px;
+        text-align: center;
     }
     
     /*Login Form*/
-    .form{
+    .form-container{
         display: flex;
         flex-direction: column;
-        height: 315px;
-        width: 400px;
-       /* border: 1px solid black;*/
+        height: 500px;
+        width: 700px;
         align-items: center;
         margin: auto;
         margin-top: 50px;
@@ -52,7 +76,7 @@ body{
         box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
         border-radius: 20px;
     }
-    .form h1{
+    .form-container h1{
         color: white;
         font-size: 2rem;
         margin: 30px;
@@ -76,6 +100,7 @@ body{
     #submit{
         padding: 5px 10px;
         margin-top: 5px;
+        margin-bottom: 15px;
         width: 40%;
         background-color: rgba(0, 0, 0, 0.5);
         box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
