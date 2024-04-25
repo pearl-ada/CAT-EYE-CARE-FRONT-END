@@ -1,33 +1,33 @@
 <?php
 include 'config.php';
 
-if(isset($_POST['submit'])){
+//if(isset($_POST['submit'])){
 
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $pass =  ($_POST['password']);
-    $cpass = ($_POST['cpassword']);
-    $user_type = $_POST['user_type'];
+  //  $name = mysqli_real_escape_string($conn, $_POST['name']);
+    //$email = mysqli_real_escape_string($conn, $_POST['email']);
+   // $pass =  ($_POST['password']);
+    //$cpass = ($_POST['cpassword']);
+    //$user_type = $_POST['user_type'];
 
-   $select = " SELECT * FROM `user_form` WHERE email = '$email' && 
-    password = '$pass' ";
+   //$select = " SELECT * FROM `user_form` WHERE email = '$email' && 
+    //password = '$pass' ";
 
-    $result = mysqli_query($conn, $select);
+    //$result = mysqli_query($conn, $select);
 
-   if(mysqli_num_rows($result) > 0)
-   {
-    $row = mysqli_fetch_array($result);
+   //if(mysqli_num_rows($result) > 0)
+   //{
+    //$row = mysqli_fetch_array($result);
 
-    if($row ['user_type'] == 'user'){
-        $_SESSION['user_name'] = $row['name'];
+    //if($row ['user_type'] == 'user'){
+      //  $_SESSION['user_name'] = $row['name'];
         
    
-        header("Location: ../HTML/dashboard.html");
-    }
-    }else{
-            $error[] = 'incorrect email or password!';
-        }
-    }
+        //header("Location: ../HTML/dashboard.html");
+    //}
+    //}else{
+      //      $error[] = 'incorrect email or password!';
+        //}
+    //}
     
 
 
@@ -60,22 +60,23 @@ if(isset($_POST['submit'])){
     <h1>CAT-EYE CARE</h1>
     <h3>WELCOME</h3>
  </div>
- <form action="login.php" method="post" enctype="multipart/form-data">
+ <form action="login.php" method="post" class="form-container">
     <div class="form">
         <h1>LOGIN</h1>
        <?php
     if(isset($error)){
         foreach($error as $error){
-            echo '<span class="error-msg">'.$error.'</span>';
+            echo '<div class="error-msg">'.$error.'</div>';
        }
    }
     ?>
-
+    <form action="" method="post" enctype="multipart/form-data">
         <input type="email" name="email" class="box" placeholder="Enter Username" required>
         <input type="password" name="Password" class="box" placeholder="Enter Password" required>
         <input type="submit" value="LOGIN" id="submit"> 
-      <p>  <a href="../HTML/signup.html">Don't have an account? Sign in here</a></p>
-    </div>
+      <p>  <a href="../DATABASE/register.php">Don't have an account? Sign in here</a></p>
 </form>
+</form>
+</div>
 </body>
 </html>

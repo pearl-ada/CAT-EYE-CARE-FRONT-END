@@ -66,7 +66,7 @@ if(isset($_POST['submit'])){
         <input type="password" name="cpassword" placeholder="confirm password" class="box" requred>
        <input type="submit" name="submit" value="SIGN IN" id="submit">
         <p>
-    <a href="../HTML/login.html">Have an account? Login here</a></p>
+    <a href="../DATABASE/login.php">Have an account? Login here</a></p>
 </form> 
 </form>
     </div>
