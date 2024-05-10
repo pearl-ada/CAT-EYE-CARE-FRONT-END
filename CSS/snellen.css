@@ -6,6 +6,9 @@ body{
     color: brown;
     font-size: 20px;
     }
+    .hee{
+        padding-left: 5%;
+    }
     .chart{
        position: relative ;
        justify-content: center;

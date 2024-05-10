@@ -6,14 +6,21 @@ body{
     color: brown;
     font-size: 20px;
     }
+    .hee{
+    padding-left: 10%;
+
+    }
+    .he{
+        padding-left: 3%;
+    }
     .form{
         display: flex;
         flex-direction: column;
-        height: 520px;
+        height: 500px;
         width: 700px;
         align-items: center;
         margin: auto;
-        margin-top: 50px;
+        margin-top: 60px;
         background-color: rgba(0, 0, 0, 0.5);
         box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
         border-radius: 20px;

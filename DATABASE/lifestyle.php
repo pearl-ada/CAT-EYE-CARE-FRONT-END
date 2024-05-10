@@ -121,7 +121,7 @@
 
 
 	<div>
-	<a href="responsep.php">	<input class="button" type="submit" name="submit" value="Submit" /></a>
+	 <input class="button" type="submit" name="submit" value="Submit" />
 	</div>
 
 	<?php  
@@ -159,14 +159,14 @@ if ($answer5 == "Yes")
 <?php
 //Analysis
  	$data_id = "";
- 	$illness = "lifestle";
+ 	$illness = "lifestyle";
  	$user_id = $_SESSION["user_id"];
  
 
 	$sql = "INSERT INTO data(illness,user_id) 
 		    VALUES('$illness', '$user_id')";
 
-		    $con->query($sql);
+		   // $conn->query($sql);
 
  }
  else 
@@ -180,13 +180,13 @@ if ($answer5 == "Yes")
 	$sql = "INSERT INTO data(illness,user_id) 
 		    VALUES('$illness', '$user_id')";
 
-		    $con->query($sql);
+		  //  $conn->query($sql);
  }
 }
 ?>
  </div>	
 </form>
  </body>
- <a href="../HTML/detect.html" class="button button1">Back</a>
+ <a href="../HTML/predict.html" class="button button1">Back</a>
  
 </html>

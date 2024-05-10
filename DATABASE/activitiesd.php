@@ -90,34 +90,34 @@
 <h3>Answer the following questions by clicking either Yes or No.</h3>
 
 	HEAVY LIFTING?<br></br>
-	<input type="radio" name="abdominal" value="Yes" >
-	<label for="abdominal">Yes</label>
-	<input type="radio" name="abdominal" value="No" >
-	<label for="abdominal">No</label><br></br>
+	<input type="radio" name="heavyl" value="Yes" >
+	<label for="heavyl">Yes</label>
+	<input type="radio" name="heavyl" value="No" >
+	<label for="heavyl">No</label><br></br>
                                                                                                                                                                                                                                                                                                                                                
 	RUBBNG MY EYES?<br></br>
-	<input type="radio" name="toilet" value="Yes">
-	<label for="toilet">Yes</label>
+	<input type="radio" name="rubbing" value="Yes">
+	<label for="rubbing">Yes</label>
 	<input type="radio" name="toilet" value="No" >
-	<label for="toilet">No</label><br></br>
+	<label for="rubbing">No</label><br></br>
 
 	SWIMMING OR HOT TUBS?<br></br>
-	<input type="radio" name="faeces" value="Yes">
-	<label for="faeces">Yes</label>
-	<input type="radio" name="faeces" value="No" >
-	<label for="faeces">No</label><br></br>	
+	<input type="radio" name="hottub" value="Yes">
+	<label for="hottub">Yes</label>
+	<input type="radio" name="hottub" value="No" >
+	<label for="hottub">No</label><br></br>	
 
 	GARDENING WITHOUT PROTECTION?<br></br>
-	<input type="radio" name="nauseous" value="Yes">
-	<label for="nauseous">Yes</label>
-	<input type="radio" name="nauseous" value="No" >
-	<label for="nauseous">No</label><br></br>
+	<input type="radio" name="gardening" value="Yes">
+	<label for="gardening">Yes</label>
+	<input type="radio" name="gardening" value="No" >
+	<label for="gardening">No</label><br></br>
 
 	NOT WEARING SHADES?<br></br>
-	<input type="radio" name="vomitting" value="Yes">
-	<label for="vomitting">Yes</label>
-	<input type="radio" name="vomitting" value="No" >
-	<label for="vomitting">No</label><br></br>
+	<input type="radio" name="shades" value="Yes">
+	<label for="shades">Yes</label>
+	<input type="radio" name="shades" value="No" >
+	<label for="shades">No</label><br></br>
 
 
 	<div>
@@ -128,11 +128,11 @@
 	session_start();
 	if (isset($_POST["submit"]))
 	{	
-	$answer1 = $_POST['abdominal'];
-	$answer2 = $_POST['toilet'];
-	$answer3 = $_POST['faeces'];
-	$answer4 = $_POST['nauseous'];		
-	$answer5 = $_POST['vomitting'];
+	$answer1 = $_POST['heavyl'];
+	$answer2 = $_POST['rubbing'];
+	$answer3 = $_POST['hottub'];
+	$answer4 = $_POST['gardening'];		
+	$answer5 = $_POST['shades'];
 	$totalCorrect = 0;
 
 if ($answer1 == "Yes") 
@@ -152,26 +152,26 @@ if ($answer5 == "Yes")
 
  if ($totalCorrect >= 3)
  {
- 	echo "<P style='color: red; font-size: 30px;'>You may be having peptic ulcer.</p>";
+ 	echo "<P style='color: red; font-size: 30px;'>You may have some complications, Please see your doctor.</p>";
 ?>
- 	<a href="diarrhoeadiag.php?category=diarrhoea" class=""></a>
+ 	
 
 <?php
 //Analysis
  	$data_id = "";
- 	$illness = "Diarrhoea";
+ 	$illness = "activities";
  	$user_id = $_SESSION["user_id"];
  
 
 	$sql = "INSERT INTO data(illness,user_id) 
 		    VALUES('$illness', '$user_id')";
 
-		    $con->query($sql);
+		  //  $con->query($sql);
 
  }
  else 
  {
- 	echo "You may not be having Ulcer, You might be having heartburn.";
+ 	echo "You do not have any complications.";
 
  	$data_id = "";
  	$illness = "Healthy";
@@ -180,7 +180,7 @@ if ($answer5 == "Yes")
 	$sql = "INSERT INTO data(illness,user_id) 
 		    VALUES('$illness', '$user_id')";
 
-		    $con->query($sql);
+		 //   $con->query($sql);
  }
 }
 ?>

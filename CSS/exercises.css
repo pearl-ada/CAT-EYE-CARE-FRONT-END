@@ -6,6 +6,9 @@ body{
     color: brown;
     font-size: 20px;
     }
+    .hee{
+        padding-left: 7%;
+    }
     #back{
         padding: 15px 60px 10px 10px;
         margin-top: 5px;
@@ -21,10 +24,10 @@ body{
     .writeup{
         width: 90%;
         padding: 20px;
-        font-size: 18px;
+        font-size: 19px;
         line-height: 25px;
         word-spacing: 10px;
-        color: white;
+        color: black;
     } 
 #back:hover{
         cursor: pointer;

@@ -79,45 +79,45 @@
   color:black;
 }
 	</style>
-	<title>Symptoms</title>
+	<title>Activities Carried Out</title>
 </head>
 <body>
 
 <form name = "confirm" method = "POST">
-<h2>HOW ARE YOU FEELING ?</h2>
+<h2>WHAT KIND OF ACTIVITIES HAVE YOU BEEN CARRYING OUT?</h2>
 
 <div class="boxed">
 <h3>Answer the following questions by clicking either Yes or No.</h3>
 
-	MILD DISCOMFORT ?<br></br>
-	<input type="radio" name="discomfort" value="Yes" >
-	<label for="discomfort">Yes</label>
-	<input type="radio" name="discomfort" value="No" >
-	<label for="discomfort">No</label><br></br>
+	HEAVY LIFTING?<br></br>
+	<input type="radio" name="heavyl" value="Yes" >
+	<label for="heavyl">Yes</label>
+	<input type="radio" name="heavyl" value="No" >
+	<label for="heavyl">No</label><br></br>
                                                                                                                                                                                                                                                                                                                                                
-	SEVERE DISCOMFORT ?<br></br>
-	<input type="radio" name="severe" value="Yes">
-	<label for="severe">Yes</label>
-	<input type="radio" name="severe" value="No" >
-	<label for="severe">No</label><br></br>
+	RUBBNG MY EYES?<br></br>
+	<input type="radio" name="rubbing" value="Yes">
+	<label for="rubbing">Yes</label>
+	<input type="radio" name="toilet" value="No" >
+	<label for="rubbing">No</label><br></br>
 
-	BLURRY VISION ?<br></br>
-	<input type="radio" name="vision" value="Yes">
-	<label for="vision">Yes</label>
-	<input type="radio" name="vision" value="No" >
-	<label for="vision">No</label><br></br>	
+	SWIMMING OR HOT TUBS?<br></br>
+	<input type="radio" name="hottub" value="Yes">
+	<label for="hottub">Yes</label>
+	<input type="radio" name="hottub" value="No" >
+	<label for="hottub">No</label><br></br>	
 
-	CHANGES IN COLOUR ?<br></br>
-	<input type="radio" name="colour" value="Yes">
-	<label for="colour">Yes</label>
-	<input type="radio" name="colour" value="No" >
-	<label for="colour">No</label><br></br>
+	GARDENING WITHOUT PROTECTION?<br></br>
+	<input type="radio" name="gardening" value="Yes">
+	<label for="gardening">Yes</label>
+	<input type="radio" name="gardening" value="No" >
+	<label for="gardening">No</label><br></br>
 
-	HALOS AROUND LIGHTS ?<br></br>
-	<input type="radio" name="light" value="Yes">
-	<label for="light">Yes</label>
-	<input type="radio" name="light" value="No" >
-	<label for="light">No</label><br></br>
+	NOT WEARING SHADES?<br></br>
+	<input type="radio" name="shades" value="Yes">
+	<label for="shades">Yes</label>
+	<input type="radio" name="shades" value="No" >
+	<label for="shades">No</label><br></br>
 
 
 	<div>
@@ -128,11 +128,11 @@
 	session_start();
 	if (isset($_POST["submit"]))
 	{	
-	$answer1 = $_POST['discomfort'];
-	$answer2 = $_POST['severe'];
-	$answer3 = $_POST['vision'];
-	$answer4 = $_POST['colour'];		
-	$answer5 = $_POST['light'];
+	$answer1 = $_POST['heavyl'];
+	$answer2 = $_POST['rubbing'];
+	$answer3 = $_POST['hottub'];
+	$answer4 = $_POST['gardening'];		
+	$answer5 = $_POST['shades'];
 	$totalCorrect = 0;
 
 if ($answer1 == "Yes") 
@@ -152,27 +152,26 @@ if ($answer5 == "Yes")
 
  if ($totalCorrect >= 3)
  {
- 	echo "<P style='color: red; font-size: 30px;'>You may have some complications, Please see your doctor.</p>";
-     
+ 	echo "<P style='color: red; font-size: 30px;'>The chances of success after the surgery below 99%.</p>";
 ?>
  	
 
 <?php
 //Analysis
  	$data_id = "";
- 	$illness = "symptoms";
+ 	$illness = "activities";
  	$user_id = $_SESSION["user_id"];
  
 
 	$sql = "INSERT INTO data(illness,user_id) 
 		    VALUES('$illness', '$user_id')";
 
-		   // $con->query($sql);
+		  //  $con->query($sql);
 
  }
  else 
  {
- 	echo "You do not have complications.";
+ 	echo "The chances of sucess after the surgery is above 99%.";
 
  	$data_id = "";
  	$illness = "Healthy";
@@ -188,6 +187,6 @@ if ($answer5 == "Yes")
  </div>	
 </form>
  </body>
- <a href="../HTML/detect.html" class="button button1">Back</a>
+ <a href="../HTML/predict.html" class="button button1">Back</a>
  
 </html>

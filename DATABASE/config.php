@@ -4,10 +4,7 @@ session_start();
 $username = "";
 $email    = "";
 $errors = array(); 
-
-
-
-$conn = mysqli_connect('localhost', 'root','','user_db') or die('connection failed');
+$conn = mysqli_connect ('localhost','root','', 'user_db') or die('connection failed');
 
 // LOGIN USER
 if (isset($_POST['login_user'])) 

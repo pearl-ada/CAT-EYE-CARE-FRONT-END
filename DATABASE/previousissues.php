@@ -90,34 +90,34 @@
 <h3>Answer the following questions by clicking either Yes or No.</h3>
 
 	DO YOU HAVE GLAUCOMA ?<br></br>
-	<input type="radio" name="abdominal" value="Yes" >
-	<label for="abdominal">Yes</label>
-	<input type="radio" name="abdominal" value="No" >
-	<label for="abdominal">No</label><br></br>
+	<input type="radio" name="glaucoma" value="Yes" >
+	<label for="glaucoma">Yes</label>
+	<input type="radio" name="glaucoma" value="No" >
+	<label for="glaucoma">No</label><br></br>
                                                                                                                                                                                                                                                                                                                                                
 	DO YOU HAVE MACULAR DEGENERATION ?<br></br>
-	<input type="radio" name="toilet" value="Yes">
-	<label for="toilet">Yes</label>
-	<input type="radio" name="toilet" value="No" >
-	<label for="toilet">No</label><br></br>
+	<input type="radio" name="md" value="Yes">
+	<label for="md">Yes</label>
+	<input type="radio" name="md" value="No" >
+	<label for="md">No</label><br></br>
 
 	DO YOU HAVE EYE INJURIES ?<br></br>
-	<input type="radio" name="faeces" value="Yes">
-	<label for="faeces">Yes</label>
-	<input type="radio" name="faeces" value="No" >
-	<label for="faeces">No</label><br></br>	
+	<input type="radio" name="injuries" value="Yes">
+	<label for="injuries">Yes</label>
+	<input type="radio" name="injuries" value="No" >
+	<label for="injuries">No</label><br></br>	
 
 	HAVE YOU HAD EYE SUGRIES BEFORE ?<br></br>
-	<input type="radio" name="nauseous" value="Yes">
-	<label for="nauseous">Yes</label>
-	<input type="radio" name="nauseous" value="No" >
-	<label for="nauseous">No</label><br></br>
+	<input type="radio" name="surgies" value="Yes">
+	<label for="surgies">Yes</label>
+	<input type="radio" name="surgies" value="No" >
+	<label for="surgies">No</label><br></br>
 
 	DO YOU HAVE CHRONIC EYE INFLAMMATION ?<br></br>
-	<input type="radio" name="vomitting" value="Yes">
-	<label for="vomitting">Yes</label>
-	<input type="radio" name="vomitting" value="No" >
-	<label for="vomitting">No</label><br></br>
+	<input type="radio" name="inflammation" value="Yes">
+	<label for="inflammation">Yes</label>
+	<input type="radio" name="inflammation" value="No" >
+	<label for="inflammation">No</label><br></br>
 
 
 	<div>
@@ -128,11 +128,11 @@
 	session_start();
 	if (isset($_POST["submit"]))
 	{	
-	$answer1 = $_POST['abdominal'];
-	$answer2 = $_POST['toilet'];
-	$answer3 = $_POST['faeces'];
-	$answer4 = $_POST['nauseous'];		
-	$answer5 = $_POST['vomitting'];
+	$answer1 = $_POST['glaucoma'];
+	$answer2 = $_POST['md'];
+	$answer3 = $_POST['injuries'];
+	$answer4 = $_POST['surgies'];		
+	$answer5 = $_POST['inflammation'];
 	$totalCorrect = 0;
 
 if ($answer1 == "Yes") 
@@ -152,26 +152,26 @@ if ($answer5 == "Yes")
 
  if ($totalCorrect >= 3)
  {
- 	echo "<P style='color: red; font-size: 30px;'>You may be having peptic ulcer.</p>";
+ 	echo "<P style='color: red; font-size: 30px;'>The chances of success after the surgery below 99%.</p>";
 ?>
- 	<a href="diarrhoeadiag.php?category=diarrhoea" class=""></a>
+ 	
 
 <?php
 //Analysis
  	$data_id = "";
- 	$illness = "Diarrhoea";
+ 	$illness = "activities";
  	$user_id = $_SESSION["user_id"];
  
 
 	$sql = "INSERT INTO data(illness,user_id) 
 		    VALUES('$illness', '$user_id')";
 
-		    $con->query($sql);
+		  //  $con->query($sql);
 
  }
  else 
  {
- 	echo "You may not be having Ulcer, You might be having heartburn.";
+ 	echo "The chances of sucess after the surgery is above 99%.";
 
  	$data_id = "";
  	$illness = "Healthy";
@@ -180,13 +180,13 @@ if ($answer5 == "Yes")
 	$sql = "INSERT INTO data(illness,user_id) 
 		    VALUES('$illness', '$user_id')";
 
-		    $con->query($sql);
+		  //  $con->query($sql);
  }
 }
 ?>
  </div>	
 </form>
  </body>
- <a href="../HTML/detect.html" class="button button1">Back</a>
+ <a href="../HTML/predict.html" class="button button1">Back</a>
  
 </html>
